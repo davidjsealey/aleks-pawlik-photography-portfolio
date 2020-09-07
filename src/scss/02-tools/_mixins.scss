@@ -1,0 +1,47 @@
+@mixin headerText {
+    font-family: $font-family-body;
+    font-size: $font-size-header;
+    line-height: $line-height-header;
+}
+
+@mixin bodyText {
+    font-family: $font-family-body;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin padding($key...) {
+  @if (length($key) == 1) {
+    padding: get-spacing(nth($key, 1));
+  } @else {
+    $concat-value: '';
+
+    @for $i from 1 through length($key) {
+      $concat-value: '#{$concat-value} #{get-spacing(nth($key, $i))}';
+    }
+
+    padding: unquote($concat-value);
+  }
+}
+
+@mixin margin($key...) {
+  @if (length($key) == 1) {
+    margin: get-spacing(nth($key, 1));
+  } @else {
+    $concat-value: '';
+
+    @for $i from 1 through length($key) {
+      $concat-value: '#{$concat-value} #{get-spacing(nth($key, $i))}';
+    }
+
+    margin: unquote($concat-value);
+  }
+}
