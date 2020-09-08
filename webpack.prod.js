@@ -1,6 +1,6 @@
 const path = require("path");
 const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -14,14 +14,7 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "template.html",
-      minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
-          removeComments: true
-      }
-    }),
+    new HtmlWebpackPlugin(),
   ],
   module: {
     rules: [
