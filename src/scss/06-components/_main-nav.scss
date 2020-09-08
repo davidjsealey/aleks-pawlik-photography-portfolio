@@ -2,6 +2,33 @@
     display: flex;
 }
 
-.main-nav__menu > li {
-    padding: 0 10px;
-}
+.main-nav__menu {
+    
+    > li {
+        padding: 0 10px;
+    }
+    
+    a {
+        color: $grey;
+        position: relative;
+
+        &::after {
+            background-color: $grey-light;
+            bottom: -2px;
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            transform: scaleX(0);
+            transition: transform $transition;
+            width: 100%;
+        }
+
+        &:hover {
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+} 
