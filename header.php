@@ -25,4 +25,14 @@
 
     <header>
     This is the header.
+    <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'primary',
+                'container' => 'nav',
+                'container_class' => 'main-nav__menu-container',
+                'menu_class' => 'main-nav__menu'
+            )
+        );
+    ?>
     </header>
