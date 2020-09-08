@@ -1,4 +1,4 @@
-# beat-it-cancer
+# Aleks Pawlik Photography Portfolio
 
 ## Layout
 
@@ -59,13 +59,9 @@ then use the mixin and map to get the sprite
 
 ## Dev
 
-Run Dev Server - This command will build the project with linting, watch the source files and start a live reload server on [http://localhost:3003](http://localhost:3003)
-
->`npm run serve`
-
 Build Only - To only build, lint and watch, no live server, you can use the following command
 
->`npm run watch`
+>`npm start`
 
 Stand Alone Lint - This will run a lint over all source files ( JSX ) in the src/js folder ( eslint )
 
