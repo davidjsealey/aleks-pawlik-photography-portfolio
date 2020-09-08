@@ -3,7 +3,9 @@
 }
 
 .header__container {
+    align-items: center;
     justify-content: space-between;
+    padding: 50px 0;
 }
 
 .header__col {
@@ -15,5 +17,11 @@
 }
 
 .header__logo {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-weight: $light;
+    line-height: 1;
+
+    @include media-query('sm') {
+        font-size: 1.6rem;
+    }
 }

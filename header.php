@@ -26,7 +26,7 @@
     <header class="header">
         <div class="container header__container">
             <div class="header__col header__col--1">
-                <h1 class="header__logo">Aleks Pawlik.</h1>
+                <a href="/"><h1 class="header__logo">Aleks<br>Pawlik.</h1></a>
             </div>
             <div class="header__col header__col--2">
                 <?php
