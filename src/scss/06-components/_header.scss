@@ -1,0 +1,19 @@
+.header {
+    @include grid-row();
+}
+
+.header__container {
+    justify-content: space-between;
+}
+
+.header__col {
+    padding: 0 20px;
+
+    @include media-query('sm') {
+        padding: 0 50px;
+    }
+}
+
+.header__logo {
+    font-size: 2rem;
+}

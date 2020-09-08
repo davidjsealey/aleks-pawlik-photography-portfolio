@@ -23,16 +23,23 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header>
-    This is the header.
-    <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'primary',
-                'container' => 'nav',
-                'container_class' => 'main-nav__menu-container',
-                'menu_class' => 'main-nav__menu'
-            )
-        );
-    ?>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__col header__col--1">
+                <h1 class="header__logo">Aleks Pawlik.</h1>
+            </div>
+            <div class="header__col header__col--2">
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'primary',
+                            'container' => 'nav',
+                            'container_class' => 'main-nav__menu-container',
+                            'menu_class' => 'main-nav__menu'
+                        )
+                    );
+                ?>
+            </div>
+
+        </div>
     </header>

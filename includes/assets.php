@@ -8,6 +8,9 @@ add_action('wp_enqueue_scripts', function () {
         global $wp_styles, $wp_scripts; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
         $version = wp_get_theme()->get("Version");
 
+        wp_register_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap', false );  
+        wp_enqueue_style('wpb-google-fonts');
+
         wp_register_style('styles-core', get_template_directory_uri() . '/dist/main.css', array(), $version);
         wp_enqueue_style('styles-core');
 
