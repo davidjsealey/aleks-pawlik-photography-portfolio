@@ -8,12 +8,12 @@ require_once "includes/assets.php"; // enqueue  of .css and .js files into head 
 
 add_filter('wpcf7_form_elements', 'do_shortcode');
 
-function my_script_enqueuer()
-{
-    wp_enqueue_script("ajax-script", plugins_url("/js/meta.js", __FILE__), ["jquery"]);
-    wp_localize_script('ajax-script', 'ajax_object', ['ajax_url' => admin_url('admin-ajax.php')]);
-}
-add_action('init', 'my_script_enqueuer');
+// function my_script_enqueuer()
+// {
+//     wp_enqueue_script("ajax-script", plugins_url("/js/meta.js", __FILE__), ["jquery"]);
+//     wp_localize_script('ajax-script', 'ajax_object', ['ajax_url' => admin_url('admin-ajax.php')]);
+// }
+// add_action('init', 'my_script_enqueuer');
 
 /**
  * @param string $file

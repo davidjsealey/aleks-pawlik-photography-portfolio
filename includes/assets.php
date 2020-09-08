@@ -8,13 +8,13 @@ add_action('wp_enqueue_scripts', function () {
         global $wp_styles, $wp_scripts; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
         $version = wp_get_theme()->get("Version");
 
-        wp_register_style('styles-core', get_template_directory_uri() . '/dist/styles.css', array(), $version);
+        wp_register_style('styles-core', get_template_directory_uri() . '/dist/main.css', array(), $version);
         wp_enqueue_style('styles-core');
 
-        wp_enqueue_script('script-main', get_template_directory_uri() . '/dist/app.bundle.js', array(), $version, true);
+        wp_enqueue_script('script-main', get_template_directory_uri() . '/dist/main.bundle.js', array(), $version, true);
 
         // Register the script
-        wp_register_script('script-main', get_template_directory_uri() . '/dist/app.bundle.js');
+        wp_register_script('script-main', get_template_directory_uri() . '/dist/main.bundle.js');
 
         // Localize the script with data required in the DOM e.g. window.theme_data.template_dir
         $theme_data = [
