@@ -29,17 +29,21 @@
                 <a href="/"><h1 class="header__logo">Aleks<br>Pawlik.</h1></a>
             </div>
             <div class="header__col header__col--2">
-                <a href="#" class="burger">
-                    <span class="burger__inner burger__inner--one"></span>
-                    <span class="burger__inner burger__inner--two"></span>
-                    <span class="burger__inner burger__inner--three"></span>
-                </a>
+                <div class="burger-container">
+                    <input type="checkbox" class="burger-toggle">
+                    <a href="#main-nav" class="burger">
+                        <span class="burger__inner burger__inner--one"></span>
+                        <span class="burger__inner burger__inner--two"></span>
+                        <span class="burger__inner burger__inner--three"></span>
+                    </a>
+                </div>
                 <?php
                     wp_nav_menu(
                         array(
                             'theme_location' => 'primary',
                             'container' => 'nav',
                             'container_class' => 'main-nav__menu-container',
+                            'container_id' => 'main-nav',
                             'menu_class' => 'main-nav__menu'
                         )
                     );

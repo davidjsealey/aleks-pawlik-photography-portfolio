@@ -1,7 +1,10 @@
 .main-nav__menu-container {
+    background-color: $white;
+    height: 100vh;
     position: absolute;
     transform: translateX(100%);
     transition: transform $transition;
+    width: 100%;
 
     @include media-query('sm') {
         position: relative;
@@ -10,11 +13,13 @@
 }
 
 .main-nav__menu {
-    display: flex;
-}
-
-.main-nav__menu {
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    @include media-query('sm') {
+        flex-direction: row;
+    }
     
     > li {
         padding: 0 10px;
@@ -64,4 +69,17 @@
             }
         }
     }
-} 
+}
+
+// Mobile menu reveal
+#main-nav:not(:target) {
+    opacity: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+#main-nav:target {
+    opacity: 1;
+    transform: translateX(-100%);
+    visibility: visible;
+}
