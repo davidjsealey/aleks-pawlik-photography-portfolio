@@ -1,0 +1,42 @@
+.burger {
+    display: flex;
+    flex-direction: column;
+    height: 35px;
+    position: relative;
+    width: 50px;
+}
+
+.burger__inner {
+    background-color: $black;
+    display: block;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    transition: transform .1s;
+    width: 50px;
+}
+
+.burger__inner--two {
+    top: 15px;
+    transition: opacity .1s, transform .1s;
+}
+
+.burger__inner--three {
+    top: 30px;
+}
+
+.burger--active {
+
+    .burger__inner--one {
+        transform: translateY(15px) rotate(45deg);
+    }
+    
+    .burger__inner--two {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    
+    .burger__inner--three {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+}

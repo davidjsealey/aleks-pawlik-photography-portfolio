@@ -1,8 +1,14 @@
+.main-nav__menu-container {
+    position: absolute;
+    transform: translateX(100%);
+}
+
 .main-nav__menu {
     display: flex;
 }
 
 .main-nav__menu {
+    align-items: center;
     
     > li {
         padding: 0 10px;
@@ -35,9 +41,11 @@
     .sub-menu {
         opacity: 0;
         pointer-events: none;
+        position: absolute;
     }
 
     .menu-item-has-children {
+        position: relative;
 
         @media (hover: hover) {
 
