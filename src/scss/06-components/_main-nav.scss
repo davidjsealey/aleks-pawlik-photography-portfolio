@@ -32,13 +32,13 @@
     }
     
     > li {
-        margin-bottom: 20px;
-        padding: 0 10px;
+        padding: 0 10px 20px;
     }
     
     a {
         color: $grey;
         position: relative;
+        text-transform: uppercase;
 
         &::after {
             background-color: $grey-light;
@@ -68,8 +68,31 @@
         position: absolute;
         transition: opacity $transition;
 
-        > li {
-            margin-bottom: 10px;
+        > li:first-of-type {
+            margin-bottom: 20px;
+        }
+
+        @include media-query('sm') {
+            background-color: $grey-lightest;
+            display: block;
+            left: -5px;
+            padding: 20px 30px;
+            top: 40px;
+            transform: translateY(10px);
+            transition: opacity $transition, transform $transition;
+
+            &::before {
+                border-color: transparent transparent #eeeeee transparent;
+                border-style: solid;
+                border-width: 0 15px 15px 15px;
+                content: '';
+                height: 0;
+                left: 50%;
+                position: absolute;
+                top: -15px;
+                transform: translateX(-50%);
+                width: 0;
+            }
         }
     }
 
@@ -97,6 +120,7 @@
                 > .sub-menu {
                     opacity: 1;
                     pointer-events: all;
+                    transform: translateY(0);
                 }
             }
         }
