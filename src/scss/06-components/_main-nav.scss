@@ -1,14 +1,22 @@
 .main-nav__menu-container {
     background-color: $white;
     height: 100vh;
-    position: absolute;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 200px;
     transform: translateX(100%);
-    transition: transform $transition;
+    transition: opacity $transition, transform $transition;
+    visibility: hidden;
     width: 100%;
 
     @include media-query('sm') {
+        height: auto;
+        opacity: 1;
         position: relative;
+        top: inherit;
         transform: translateX(0);
+        visibility: visible;
     }
 }
 
@@ -69,17 +77,4 @@
             }
         }
     }
-}
-
-// Mobile menu reveal
-#main-nav:not(:target) {
-    opacity: 0;
-    transform: translateX(100%);
-    visibility: hidden;
-}
-
-#main-nav:target {
-    opacity: 1;
-    transform: translateX(-100%);
-    visibility: visible;
 }
