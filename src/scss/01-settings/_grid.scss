@@ -5,11 +5,11 @@ $grid-columns: 12;
 $rem-base: 16px;
 
 $breakpoints: (
-  xxs: 375px,
-  xs: 480px,
-  sm: 640px,
-  md: 720px,
-  lg: 1024px,
-  xl: 1280px,
-  xxl: 1440px
+  xxsmall: 375,
+  xs: 480,
+  sm: 640,
+  md: 720,
+  large: 1024,
+  xl: 1280,
+  xxl: 1440
 );

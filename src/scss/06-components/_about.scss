@@ -1,0 +1,22 @@
+.about {
+    max-width: 800px;
+}
+
+.about__wrap {
+    @include grid-row();
+
+    @include media-query('sm') {
+        padding-top: 50px;
+    }
+}
+
+.about__image,
+.about__text {
+    @include grid-column((xxsmall: 12, md: 6));
+}
+
+.about__image-src {
+    height: auto;
+    max-width: 400px;
+    width: 100%;
+}
