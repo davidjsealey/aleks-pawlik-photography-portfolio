@@ -16,7 +16,7 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQ4GX7"
