@@ -100,6 +100,7 @@
         position: relative;
 
         // Touch devices
+        // Phones
         @media (hover: none) {
             
             > a {
@@ -109,6 +110,28 @@
             > .sub-menu {
                 opacity: 1;
                 pointer-events: all;
+            }
+
+            // Tablets
+            @include media-query('sm') {
+
+                > a {
+                    color: $grey;
+                }
+
+                > .sub-menu {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                
+                &:hover {
+
+                    > .sub-menu {
+                        opacity: 1;
+                        pointer-events: all;
+                        transform: translateY(0);
+                    }
+                }
             }
         }
 
