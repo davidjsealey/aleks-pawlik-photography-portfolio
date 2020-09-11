@@ -1,15 +1,16 @@
+// Font weights
+$light: 300;
+$normal: 500;
+$semibold: 600;
+$bold: 700;
+
 // Body text
 $font-family-body: 'Roboto', Arial, sans-serif;
 $font-size-body: 1rem;
+$font-weight: $light;
 $line-height-body: 1.2;
 
 // Header text
 $font-family-header: 'Roboto', Arial, sans-serif;
 $font-size-header: 5rem;
 $line-height-header: 1.4;
-
-// Font weights
-$light: 300;
-$normal: 500;
-$semibold: 600;
-$bold: 700;

@@ -13,7 +13,7 @@
         <section class="about container">
             <div class="about__wrap">
                 <div class="about__image">
-                    <img src="/wp-content/themes/aleks-pawlik-photography-portfolio/images/placeholder-about.jpg" alt="Aleks Pawlik" class="about__image-src">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder-about.jpg" alt="Aleks Pawlik" class="about__image-src">
                 </div>
                 <div class="about__text">
                     <div class="about__text-container">
@@ -21,7 +21,7 @@
                         <p>Hi, this is your pal, Al.</p>
                     </div>
                     <div class="about__text-container">
-                        <h2 class="about__text-header">Contact me</h2>
+                        <h2 class="about__text-header about__text-header--sm">Contact me</h2>
                         <a href="mailto:test@test.com" class="about__email">test@test.com</a>
                         <ul class="about__socials">
                             <li class="about__socials-items">

@@ -1,27 +1,40 @@
+/* eslint-disable */
+const fs = require("fs");
 const path = require("path");
-const common = require("./webpack.common");
+const common = require("./webpack.config");
 const { merge } = require("webpack-merge");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = merge(common, {
-  mode: "production",
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-  },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].css" }),
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-      },
-    ],
-  },
-});
+module.exports = () => {
+  // const generateVersionedCSS = () => {
+  //   const dateString = new Date().toISOString().replace(/[-:.TZ]/g, "");
+
+  //   let file = fs.readFileSync(path.join(".", "style.css"));
+  //   file = file.toString().replace(/<\$VERSION\$>/g, dateString);
+  //   fs.writeFileSync(path.join("..", "style.css"), file);
+  // };
+
+  // generateVersionedCSS();
+
+  const config = merge(common, {
+    mode: "production",
+    module: {
+      rules: [
+        // {
+        //   test: /\.(jpe?g|png|gif|svg)$/i,
+        //   use: [
+        //     {
+        //       loader: "kraken-loader",
+        //       options: {
+        //         secret: "59e2f4202e04bf55955d938055fd2bae6fa15f15",
+        //         silent: false,
+        //         lossy: false,
+        //         key: "6f110caf166a4e6760b90eb8e3befc22",
+        //       },
+        //     },
+        //   ],
+        // },
+      ],
+    },
+  });
+  return config;
+};

@@ -1,5 +1,5 @@
 .about {
-    max-width: 800px;
+    max-width: $grid-container-sm;
 }
 
 .about__wrap {
@@ -15,8 +15,36 @@
     @include grid-column((xxsmall: 12, md: 6));
 }
 
+.about__image {
+    margin-bottom: 30px;
+}
+
 .about__image-src {
     height: auto;
     max-width: 400px;
     width: 100%;
+}
+
+.about__text-header {
+    font-size: 2rem;
+}
+
+.about__text-header--sm {
+    font-size: 1.6rem;
+}
+
+.about__email {
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.about__socials {
+    display: flex;
+}
+
+.about__socials-icon {
+    height: 30px;
+    width: 30px;
 }

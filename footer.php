@@ -1,6 +1,3 @@
-    <footer>
-    This is the footer.
-    </footer>
     <?php // SVG Icons ?>
     <script>
         // (function() {
