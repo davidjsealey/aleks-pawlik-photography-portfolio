@@ -32,29 +32,23 @@
                         <?php if ($email) : ?>
                             <a href="mailto:<?php echo $email; ?>" class="about__email"><?php echo $email; ?></a>
                         <?php endif; ?>
-                        <ul class="about__socials">
-                            <li class="about__socials-items">
-                                <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Facebook" class="about__socials-anchor">
-                                    <svg class="about__socials-icon">
-                                        <use xlink:href="#sprite-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="about__socials-items">
-                                <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Instagram" class="about__socials-anchor">
-                                    <svg class="about__socials-icon">
-                                        <use xlink:href="#sprite-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="about__socials-items">
-                                <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Pinterest" class="about__socials-anchor">
-                                    <svg class="about__socials-icon">
-                                        <use xlink:href="#sprite-pinterest"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                        <?php if (have_rows('social_media_links')) : ?>
+                            <ul class="about__socials">
+                                <?php while (have_rows('social_media_links')) : the_row(); ?>
+                                    <?php
+                                    $escSocialURL = esc_url(get_sub_field('social_media_link'));
+                                    $escSocialPlatform = esc_html(get_sub_field('social_media_platform'));
+                                    ?>
+                                    <li class="about__socials-items">
+                                        <a href="<?php echo $escSocialURL; ?>" target="_blank" rel="noopener" aria-label="Follow Aleks Pawlik on <?php echo $escSocialPlatform; ?>" class="about__socials-anchor" aria-label="<?php echo $escSocialPlatform; ?>">
+                                            <svg class="about__socials-icon">
+                                                <use xlink:href="#sprite-<?php echo $escSocialPlatform; ?>"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                <?php endwhile; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
