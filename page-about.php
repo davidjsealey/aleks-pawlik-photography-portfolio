@@ -1,5 +1,10 @@
 <?php /* Template Name: About Template */ ?>
 
+<?php
+    $aboutText  = get_field('about_me_text');
+    $email = esc_html(get_field('email_address'));
+?>
+
 <?php get_header(); ?>
 
 <?php if (is_404()):?>
@@ -16,13 +21,17 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder-about.jpg" alt="Aleks Pawlik" class="about__image-src">
                 </div>
                 <div class="about__text">
-                    <div class="about__text-container">
-                        <h1 class="about__text-header">About me</h1>
-                        <p>Hi, this is your pal, Al.</p>
-                    </div>
+                    <?php if ($aboutText) : ?>
+                        <div class="about__text-container">
+                            <h1 class="about__text-header">About me</h1>
+                            <p><?php echo $aboutText; ?></p>
+                        </div>
+                    <?php endif; ?>
                     <div class="about__text-container">
                         <h2 class="about__text-header about__text-header--sm">Contact me</h2>
-                        <a href="mailto:test@test.com" class="about__email">test@test.com</a>
+                        <?php if ($email) : ?>
+                            <a href="mailto:<?php echo $email; ?>" class="about__email"><?php echo $email; ?></a>
+                        <?php endif; ?>
                         <ul class="about__socials">
                             <li class="about__socials-items">
                                 <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Facebook" class="about__socials-anchor">
