@@ -8,6 +8,8 @@ require_once "includes/assets.php"; // enqueue  of .css and .js files into head 
 
 add_filter('wpcf7_form_elements', 'do_shortcode');
 
+add_theme_support('post-thumbnails');
+
 // function my_script_enqueuer()
 // {
 //     wp_enqueue_script("ajax-script", plugins_url("/js/meta.js", __FILE__), ["jquery"]);

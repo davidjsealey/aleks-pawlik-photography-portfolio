@@ -18,7 +18,7 @@
         <section class="about container">
             <div class="about__wrap">
                 <div class="about__image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder-about.jpg" alt="Aleks Pawlik" class="about__image-src">
+                    <?php the_post_thumbnail('', array('class' => 'about__image-src')); ?>
                 </div>
                 <div class="about__text">
                     <?php if ($aboutText) : ?>
