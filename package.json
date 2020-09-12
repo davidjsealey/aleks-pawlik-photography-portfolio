@@ -9,7 +9,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint src/js/**/*.js*",
     "serve": "webpack-dev-server",
-    "lint-style": "sass-lint -c .sass-lint.yml './src/**/*.scss' -v -q | tee lint-errors.txt"
+    "lint-style": "tee lint-errors.txt"
   },
   "repository": {
     "type": "git",

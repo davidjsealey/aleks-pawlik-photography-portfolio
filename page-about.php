@@ -25,21 +25,24 @@
                         <a href="mailto:test@test.com" class="about__email">test@test.com</a>
                         <ul class="about__socials">
                             <li class="about__socials-items">
-                                <a href="" class="about__socials-anchor">
-                                    facebook
-                                    <svg class="about__socials-icon"></svg>
+                                <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Facebook" class="about__socials-anchor">
+                                    <svg class="about__socials-icon">
+                                        <use xlink:href="#sprite-facebook"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="about__socials-items">
-                                <a href="" class="about__socials-anchor">
-                                    instagram
-                                    <svg class="about__socials-icon"></svg>
+                                <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Instagram" class="about__socials-anchor">
+                                    <svg class="about__socials-icon">
+                                        <use xlink:href="#sprite-instagram"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li class="about__socials-items">
-                                <a href="" class="about__socials-anchor">
-                                    pinterest
-                                    <svg class="about__socials-icon"></svg>
+                                <a href="#" target="_blank" aria-label="Follow Aleks Pawlik on Pinterest" class="about__socials-anchor">
+                                    <svg class="about__socials-icon">
+                                        <use xlink:href="#sprite-pinterest"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>

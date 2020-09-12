@@ -10,6 +10,10 @@
     }
 }
 
+.about__text-container {
+    margin-bottom: 50px;
+}
+
 .about__image,
 .about__text {
     @include grid-column((xxsmall: 12, md: 6));
@@ -27,13 +31,17 @@
 
 .about__text-header {
     font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .about__text-header--sm {
     font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .about__email {
+    display: block;
+    margin-bottom: 20px;
 
     &:hover {
         text-decoration: underline;
@@ -44,7 +52,25 @@
     display: flex;
 }
 
+.about__socials-items {
+    margin-right: 15px;
+}
+
+.about__socials-anchor {
+
+    @include media-query('sm') {
+        
+        &:hover {
+            .about__socials-icon {
+                fill: $black;
+            }
+        }
+    }
+}
+
 .about__socials-icon {
-    height: 30px;
-    width: 30px;
+    fill: $grey-light;
+    height: 20px;
+    transition: fill $transition;
+    width: 20px;
 }
