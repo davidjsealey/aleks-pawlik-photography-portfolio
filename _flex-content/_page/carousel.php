@@ -1,6 +1,8 @@
 <?php
     $carousel = get_sub_field('carousel_shortcode');
 ?>
-<section>
-    <?php echo $carousel; ?>
+<section class="carousel">
+    <div class="carousel__container">
+        <?php echo $carousel; ?>
+    </div>
 </section>

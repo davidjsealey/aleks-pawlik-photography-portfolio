@@ -10,6 +10,7 @@
     transition: opacity $transition, transform $transition;
     visibility: hidden;
     width: 100%;
+    z-index: 2;
     
     @include media-query('sm') {
         height: auto;
