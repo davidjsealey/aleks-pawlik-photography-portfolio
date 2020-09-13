@@ -41,24 +41,41 @@
         position: relative;
         text-transform: uppercase;
 
+        &::before, 
         &::after {
-            background-color: $grey-light;
-            bottom: -2px;
+            background: $grey;
             content: '';
             height: 1px;
-            left: 0;
+            margin-top: -0.5px;
             position: absolute;
-            transform: scaleX(0);
-            transition: transform $transition;
-            width: 100%;
-        }
+            top: 50%;
+            width: 0%;
+          }
+          
+          &::before {
+            left: -2.5px;
+          }
 
-        &:hover {
+          &::after {
+            background: $grey;
+            right: 2.5px;
+            transition: width .8s cubic-bezier(.22, .61, .36, 1);
+          }
+          
+          &:hover {
+
+            &::before {
+                background: $grey;
+                transition: width .5s cubic-bezier(.22, .61, .36, 1);
+                width: 100%;
+            }
 
             &::after {
-                transform: scaleX(1);
+                background: transparent;
+                transition: 0s;
+                width: 100%;
             }
-        }
+          }
     }
 
     // Projects sub menu
@@ -76,8 +93,10 @@
         @include media-query('sm') {
             background-color: $grey-lightest;
             display: block;
-            left: -5px;
-            padding: 20px 30px;
+            left: -30px;
+            min-width: 175px;;
+            padding: 20px 10px;
+            text-align: center;
             top: 40px;
             transform: translateY(10px);
             transition: opacity $transition, transform $transition;
