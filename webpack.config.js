@@ -126,21 +126,21 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),
-    new CopyWebpackPlugin(
-      {
-        patterns: [
-          {
-            from: "assets/**/*",
-            transformPath(targetPath, absolutePath) {
-              return targetPath.substr("assets/".length);
-            },
-          },
-        ],
-      },
-      {
-        debug: "info",
-      }
-    ),
+    // new CopyWebpackPlugin(
+    //   {
+    //     patterns: [
+    //       {
+    //         from: "assets/**/*",
+    //         transformPath(targetPath, absolutePath) {
+    //           return targetPath.substr("assets/".length);
+    //         },
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     debug: "info",
+    //   }
+    // ),
     new SVGSpritemapPlugin("./icons/*.svg", { styles: "~sprites.scss" }),
     new WebpackShellPlugin({
       onBuildStart: ["npm run lint-style"],
