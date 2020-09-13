@@ -17,6 +17,13 @@
     }
 }
 
+.header__col--1 {
+    
+    @include media-query('sm') {
+        padding: 0 60px;
+    }
+}
+
 .header__logo {
     font-size: 1.4rem;
     font-weight: $light;
