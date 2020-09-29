@@ -1,3 +1,4 @@
+    <p class="copyright">&copy; Copyright Aleks Pawlik <?php echo date('Y'); ?></p>
     <?php // SVG Icons ?>
     <script>
         (function() {
