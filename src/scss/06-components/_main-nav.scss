@@ -34,9 +34,10 @@
     
     > li {
         padding: 0 10px 20px;
+        position: relative;
 
         @include media-query('sm') {
-            padding-bottom: 0;
+            top: 10px;
         }
     }
     
@@ -121,7 +122,6 @@
     }
 
     .menu-item-has-children {
-        position: relative;
 
         // Touch devices
         // Phones
