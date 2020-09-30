@@ -1,4 +1,4 @@
-    <p class="copyright">&copy; Copyright Aleks Pawlik <?php echo date('Y'); ?></p>
+    <p class="copyright">Copyright &copy; 2018 - <?php echo date('Y'); ?> Aleks Pawlik. All rights reserved.</p>
     <?php // SVG Icons ?>
     <script>
         (function() {
