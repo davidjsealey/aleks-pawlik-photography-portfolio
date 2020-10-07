@@ -28,7 +28,6 @@
                         </div>
                     <?php endif; ?>
                     <div class="about__text-container">
-                        <h2 class="about__text-header about__text-header--sm">Contact me</h2>
                         <?php if ($email) : ?>
                             <a href="mailto:<?php echo $email; ?>" class="about__email"><?php echo $email; ?></a>
                         <?php endif; ?>
