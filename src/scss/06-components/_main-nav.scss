@@ -150,42 +150,6 @@
 
     .menu-item-has-children {
 
-        // Touch devices
-        // Phones
-        @media (hover: none) {
-            
-            > a {
-                color: $grey-light;
-            }
-            
-            > .sub-menu {
-                opacity: 1;
-                pointer-events: all;
-            }
-
-            // Tablets
-            @include media-query('sm') {
-
-                > a {
-                    color: $grey;
-                }
-
-                > .sub-menu {
-                    opacity: 0;
-                    pointer-events: none;
-                }
-                
-                &:hover {
-
-                    > .sub-menu {
-                        opacity: 1;
-                        pointer-events: all;
-                        transform: translateY(0);
-                    }
-                }
-            }
-        }
-
         // Mouse devices
         @media (hover: hover) {
 

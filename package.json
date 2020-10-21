@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "dom-loaded": "^2.0.0",
     "webpack-merge": "^5.1.3"
   }
 }
