@@ -1,10 +1,14 @@
 .copyright {
     color: $grey-light;
     font-size: .8rem;
-    margin: 50px 0;
+    margin: 50px 0 0;
     text-align: center;
-
+    
     @include media-query('sm') {
         font-size: 1rem;
+    }
+    
+    @include media-query('xl') {
+        margin: 50px 0;
     }
 }

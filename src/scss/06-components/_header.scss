@@ -7,7 +7,11 @@
     justify-content: space-between;
     padding: 50px 0;
 
-    @include mobilePortrait {
+    @include laptop {
+        padding: 20px 0 30px;
+    }
+
+    @include mobile {
         padding: 20px 0 30px;
     }
 }
