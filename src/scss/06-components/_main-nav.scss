@@ -6,7 +6,7 @@
     padding-top: 50px;
     pointer-events: none;
     position: fixed;
-    top: 145px;
+    top: 125px;
     transform: translateY(10px);
     transition: opacity $transition, transform $transition;
     visibility: hidden;
@@ -45,7 +45,6 @@
 
     .main-nav__menu-item--instagram {
         opacity: .6;
-        top: 100px;
         
         @include media-query('sm') {
             top: 10px;
@@ -116,19 +115,19 @@
         opacity: 0;
         padding: 20px 0 0 40px;
         pointer-events: none;
-        position: absolute;
         transition: opacity $transition;
-
+        
         > li:first-of-type {
             margin-bottom: 20px;
         }
-
+        
         @include media-query('sm') {
             background-color: $grey-lightest;
             display: block;
             left: -30px;
             min-width: 175px;;
             padding: 20px 10px;
+            position: absolute;
             text-align: center;
             top: 40px;
             transform: translateY(10px);
