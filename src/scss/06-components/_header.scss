@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 50px 0;
+
+    @include mobilePortrait {
+        padding: 20px 0 30px;
+    }
 }
 
 .header__col {

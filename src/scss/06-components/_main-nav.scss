@@ -6,7 +6,7 @@
     padding-top: 50px;
     pointer-events: none;
     position: fixed;
-    top: 125px;
+    top: 60px;
     transform: translateY(10px);
     transition: opacity $transition, transform $transition;
     visibility: hidden;
@@ -117,7 +117,7 @@
         pointer-events: none;
         transition: opacity $transition;
         
-        > li:first-of-type {
+        > li:not(:last-of-type) {
             margin-bottom: 20px;
         }
         
