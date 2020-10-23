@@ -8,15 +8,23 @@
     @include media-query('sm') {
         padding-top: 50px;
     }
+    
+    @include mobileLandscape {
+        padding-top: 0;
+    }
 }
 
-.about__text-container {
+.about__text-container:not(:last-of-type) {
     margin-bottom: 50px;
 }
 
 .about__image,
 .about__text {
     @include grid-column((xxsmall: 12, md: 6));
+
+    @include mobileLandscape {
+        width: 50%;
+    }
 }
 
 .about__image {
