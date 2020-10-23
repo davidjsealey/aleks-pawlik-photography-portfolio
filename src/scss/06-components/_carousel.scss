@@ -35,5 +35,13 @@
     .owl-stage-outer,
     .owl-stage {
         max-height: 500px;
+
+        @include laptop {
+            max-height: 400px;
+        }
+
+        @include mobileLandscape {
+            max-height: 200px;
+        }
     }
 }
