@@ -44,4 +44,13 @@
             max-height: 200px;
         }
     }
+
+    .owl-stage-outer {
+        margin: auto;
+        max-width: 333px;
+
+        @include media-query('sm') {
+            max-width: none;
+        }
+    }
 }
