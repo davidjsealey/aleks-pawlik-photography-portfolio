@@ -15,11 +15,7 @@
 }
 
 .about__text-container:not(:last-of-type) {
-    margin-bottom: 50px;
-    
-    @include mobileLandscape {
-        margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
 }
 
 .about__image,
