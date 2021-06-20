@@ -23,10 +23,22 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <?php 
+    
+    $logo = get_field('logo', 'options'); 
+    if($logo) :
+        $logoSrc = esc_url($logo['url']);
+        $logoAlt = esc_html($logo['alt']);
+    endif;
+    
+    ?>
+
     <header class="header">
         <div class="container header__container">
             <div class="header__col header__col--1">
-                <a href="/"><h1 class="header__logo">Aleks Pawlik</h1></a>
+                <a href="/">
+                    <img class="header__logo" src="<?php echo $logoSrc; ?>" alt="<?php echo $logoAlt; ?>">
+                </a>
             </div>
             <div class="header__col header__col--2">
                 <input type="checkbox" class="burger-toggle">
