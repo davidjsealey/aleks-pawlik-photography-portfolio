@@ -1,6 +1,7 @@
 <?php /* Template Name: About Template */ ?>
 
 <?php
+    $escAboutHeader  = esc_html(get_field('about_me_header'));
     $aboutText  = get_field('about_me_text');
     $email = esc_html(get_field('email_address'));
 ?>
@@ -23,7 +24,9 @@
                 <div class="about__text">
                     <?php if ($aboutText) : ?>
                         <div class="about__text-container">
-                            <h1 class="about__text-header">About me</h1>
+                            <?php if ($escAboutHeader) : ?>
+                                <h1 class="about__text-header"><?php echo $escAboutHeader; ?></h1>
+                            <?php endif; ?>
                             <p><?php echo $aboutText; ?></p>
                         </div>
                     <?php endif; ?>

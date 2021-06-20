@@ -46,3 +46,43 @@
     margin: unquote($concat-value);
   }
 }
+
+/* Laptop Media Queries */
+@mixin laptop {
+  @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+      @content;
+  }
+}
+
+/* Mobile Phone Media Queries */
+
+@mixin mobile {
+  @media only screen
+    and (min-device-width: 320px) 
+    and (max-device-width: 812px) { 
+      @content;
+  }
+}
+
+/* Portrait */
+@mixin mobilePortrait {
+  @media only screen
+    and (min-device-width: 320px) 
+    and (max-device-width: 812px) 
+    and (orientation: portrait) { 
+      @content;
+  }
+}
+
+/* Landscape */
+@mixin mobileLandscape {
+  @media only screen
+    and (min-device-width: 320px) 
+    and (max-device-width: 812px) 
+    and (orientation: landscape) { 
+      @content;
+  }
+}
