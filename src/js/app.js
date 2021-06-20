@@ -1,6 +1,5 @@
-import '../scss/styles.scss';
+import {MobileSubMenu} from './components/mobile-sub-menu';
 
-import { Test } from "./Test";
-
-const test = new Test();
-test;
+(() => {
+    new MobileSubMenu();
+})();

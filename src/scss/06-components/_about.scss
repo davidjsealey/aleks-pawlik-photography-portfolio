@@ -8,35 +8,58 @@
     @include media-query('sm') {
         padding-top: 50px;
     }
+    
+    @include mobileLandscape {
+        padding-top: 0;
+    }
 }
 
-.about__text-container {
-    margin-bottom: 50px;
+.about__text-container:not(:last-of-type) {
+    margin-bottom: 20px;
 }
 
 .about__image,
 .about__text {
     @include grid-column((xxsmall: 12, md: 6));
+
+    @include mobileLandscape {
+        width: 50%;
+    }
 }
 
 .about__image {
     margin-bottom: 30px;
+
+    @include mobileLandscape {
+        align-items: flex-end;
+    }
 }
 
 .about__image-src {
     height: auto;
     max-width: 400px;
     width: 100%;
+    
+    @include mobileLandscape {
+        max-width: 300px;
+    }
 }
 
 .about__text-header {
     font-size: 2rem;
+    font-weight: $light;
     margin-bottom: 30px;
+    
+    @include mobileLandscape {
+        margin-bottom: 5px;
+    }
 }
 
-.about__text-header--sm {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+.about__text {
+
+    @include mobileLandscape {
+        font-size: 15px;
+    }
 }
 
 .about__email {

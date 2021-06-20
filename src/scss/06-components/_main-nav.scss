@@ -3,9 +3,10 @@
     height: 100vh;
     left: 0;
     opacity: 0;
+    padding-top: 50px;
     pointer-events: none;
     position: fixed;
-    top: 145px;
+    top: 60px;
     transform: translateY(10px);
     transition: opacity $transition, transform $transition;
     visibility: hidden;
@@ -15,6 +16,7 @@
     @include media-query('sm') {
         height: auto;
         opacity: 1;
+        padding-top: 0;
         pointer-events: all;
         position: relative;
         top: inherit;
@@ -34,6 +36,36 @@
     
     > li {
         padding: 0 10px 20px;
+        position: relative;
+
+        @include media-query('sm') {
+            top: 10px;
+        }
+    }
+
+    .main-nav__menu-item--instagram {
+        opacity: .6;
+        
+        @include media-query('sm') {
+            top: 10px;
+        }
+
+        &::before {
+            background: url('../../images/instagram.png') no-repeat 50% / 20px 20px;
+            content: '';
+            display: block;
+            height: 20px;
+            left: 9px;
+            position: absolute;
+            width: 20px;
+        }
+        
+        > a {
+            display: block;
+            height: 20px;
+            font-size: 0;
+            width: 20px;
+        }
     }
     
     a {
@@ -83,19 +115,19 @@
         opacity: 0;
         padding: 20px 0 0 40px;
         pointer-events: none;
-        position: absolute;
         transition: opacity $transition;
-
-        > li:first-of-type {
+        
+        > li:not(:last-of-type) {
             margin-bottom: 20px;
         }
-
+        
         @include media-query('sm') {
             background-color: $grey-lightest;
             display: block;
             left: -30px;
             min-width: 175px;;
             padding: 20px 10px;
+            position: absolute;
             text-align: center;
             top: 40px;
             transform: translateY(10px);
@@ -117,43 +149,6 @@
     }
 
     .menu-item-has-children {
-        position: relative;
-
-        // Touch devices
-        // Phones
-        @media (hover: none) {
-            
-            > a {
-                color: $grey-light;
-            }
-            
-            > .sub-menu {
-                opacity: 1;
-                pointer-events: all;
-            }
-
-            // Tablets
-            @include media-query('sm') {
-
-                > a {
-                    color: $grey;
-                }
-
-                > .sub-menu {
-                    opacity: 0;
-                    pointer-events: none;
-                }
-                
-                &:hover {
-
-                    > .sub-menu {
-                        opacity: 1;
-                        pointer-events: all;
-                        transform: translateY(0);
-                    }
-                }
-            }
-        }
 
         // Mouse devices
         @media (hover: hover) {

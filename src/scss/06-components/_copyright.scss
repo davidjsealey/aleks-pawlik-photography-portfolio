@@ -1,0 +1,13 @@
+.copyright {
+    font-size: .9rem;
+    margin: 20px 0 0;
+    text-align: center;
+
+    @include media-query('md') {
+        margin: 20px 0 0;
+    }
+    
+    @include media-query('xl') {
+        margin: 50px 0;
+    }
+}
