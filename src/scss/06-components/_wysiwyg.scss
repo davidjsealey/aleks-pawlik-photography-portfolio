@@ -1,0 +1,71 @@
+.wysiwyg {
+  max-width: $grid-container-sm;
+}
+
+.wysiwyg__wrap {
+
+  @include media-query("sm") {
+    padding-top: 50px;
+  }
+
+  @include mobileLandscape {
+    padding-top: 0;
+  }
+}
+
+.wysiwyg {
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  img {
+    height: auto;
+    margin-bottom: 30px;
+    max-width: 100%;
+
+    @include mobileLandscape {
+      align-items: flex-end;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: block;
+    font-size: 2rem;
+    font-weight: $light;
+    margin-bottom: 30px;
+    width: 100%;
+
+    @include mobileLandscape {
+      margin-bottom: 5px;
+    }
+  }
+
+  ul,
+  ol {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+
+  ol {
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  @include mobileLandscape {
+    font-size: 15px;
+  }
+}
