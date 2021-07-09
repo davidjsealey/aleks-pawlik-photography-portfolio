@@ -3,14 +3,7 @@
 }
 
 .wysiwyg__wrap {
-
-  @include media-query("sm") {
-    padding-top: 50px;
-  }
-
-  @include mobileLandscape {
-    padding-top: 0;
-  }
+  padding: 50px 0;
 }
 
 .wysiwyg {
@@ -21,8 +14,25 @@
 
   img {
     height: auto;
-    margin-bottom: 30px;
+    margin: 30px 0;
     max-width: 100%;
+
+    &.aligncenter {
+      display: block;
+      margin: auto;
+    }
+
+    @include media-query('sm') {
+      &.alignleft {
+        float: left;
+        margin-right: 30px;
+      }
+  
+      &.alignright {
+        float: right;
+        margin-left: 30px;
+      }
+    }
 
     @include mobileLandscape {
       align-items: flex-end;
@@ -36,14 +46,28 @@
   h5,
   h6 {
     display: block;
-    font-size: 2rem;
     font-weight: $light;
     margin-bottom: 30px;
     width: 100%;
-
+    
     @include mobileLandscape {
       margin-bottom: 5px;
     }
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 2rem;
   }
 
   ul,
@@ -62,6 +86,14 @@
   ol {
     li {
       list-style-type: decimal;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
     }
   }
 
