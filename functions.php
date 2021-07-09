@@ -28,3 +28,13 @@ function soak_get_template(string $file, array $args = [], bool $return = false)
     $template = new Soak_Template($file, $args, $return);
     return $template->render($return);
 }
+
+function acf_wysiwyg_remove_wpautop()
+{
+    // remove p tags //
+    remove_filter('acf_the_content', 'wpautop');
+    // add line breaks before all newlines //
+    add_filter('acf_the_content', 'nl2br');
+}
+
+add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
