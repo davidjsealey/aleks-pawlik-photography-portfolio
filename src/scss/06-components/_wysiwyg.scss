@@ -13,14 +13,10 @@
   }
 
   img {
+    display: block;
     height: auto;
-    margin: 30px 0;
+    margin: 30px auto;
     max-width: 100%;
-
-    &.aligncenter {
-      display: block;
-      margin: auto;
-    }
 
     @include media-query('sm') {
       &.alignleft {
