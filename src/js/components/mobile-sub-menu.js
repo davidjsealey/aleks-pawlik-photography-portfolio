@@ -16,10 +16,14 @@ export class MobileSubMenu {
                 if(!this.isActive) {
                     subMenu.style.opacity = "1";
                     subMenu.style.pointerEvents = "all";
+                    subMenu.style.maxHeight = '100%'
+                    subMenu.style.paddingTop = '20px'
                     this.isActive = true;
                 } else {
                     subMenu.style.opacity = "0";
                     subMenu.style.pointerEvents = "none";
+                    subMenu.style.maxHeight = '0'
+                    subMenu.style.paddingTop = '0'
                     this.isActive = false;
                 }
             })

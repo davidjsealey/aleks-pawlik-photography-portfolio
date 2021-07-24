@@ -1,166 +1,166 @@
 .main-nav__menu-container {
-    background-color: $white;
-    height: 100vh;
-    left: 0;
-    opacity: 0;
-    padding-top: 50px;
-    pointer-events: none;
-    position: fixed;
-    top: 60px;
-    transform: translateY(10px);
-    transition: opacity $transition, transform $transition;
-    visibility: hidden;
-    width: 100%;
-    z-index: 2;
-    
-    @include media-query('sm') {
-        height: auto;
-        opacity: 1;
-        padding-top: 0;
-        pointer-events: all;
-        position: relative;
-        top: inherit;
-        transform: translateY(0);
-        visibility: visible;
-    }
+  background-color: $white;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  padding-top: 50px;
+  pointer-events: none;
+  position: fixed;
+  top: 60px;
+  transform: translateY(10px);
+  transition: opacity $transition, transform $transition;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
+
+  @include media-query("sm") {
+    height: auto;
+    opacity: 1;
+    padding-top: 0;
+    pointer-events: all;
+    position: relative;
+    top: inherit;
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 .main-nav__menu {
-    display: flex;
-    flex-direction: column;
-    
-    @include media-query('sm') {
-        align-items: center;
-        flex-direction: row;
+  display: flex;
+  flex-direction: column;
+
+  @include media-query("sm") {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  > li {
+    padding: 0 10px 20px;
+    position: relative;
+
+    @include media-query("sm") {
+      top: 10px;
     }
-    
-    > li {
-        padding: 0 10px 20px;
-        position: relative;
+  }
 
-        @include media-query('sm') {
-            top: 10px;
-        }
-    }
+  .main-nav__menu-item--instagram {
+    opacity: 0.6;
 
-    .main-nav__menu-item--instagram {
-        opacity: .6;
-        
-        @include media-query('sm') {
-            top: 10px;
-        }
-
-        &::before {
-            background: url('../../images/instagram.png') no-repeat 50% / 20px 20px;
-            content: '';
-            display: block;
-            height: 20px;
-            left: 9px;
-            position: absolute;
-            width: 20px;
-        }
-        
-        > a {
-            display: block;
-            height: 20px;
-            font-size: 0;
-            width: 20px;
-        }
-    }
-    
-    a {
-        color: $grey;
-        position: relative;
-        text-transform: uppercase;
-
-        &::before, 
-        &::after {
-            background: $grey;
-            content: '';
-            height: 1px;
-            margin-top: -0.5px;
-            position: absolute;
-            top: 50%;
-            width: 0%;
-          }
-          
-          &::before {
-            left: -2.5px;
-          }
-
-          &::after {
-            background: $grey;
-            right: 2.5px;
-            transition: width .8s cubic-bezier(.22, .61, .36, 1);
-          }
-          
-          &:hover {
-
-            &::before {
-                background: $grey;
-                transition: width .5s cubic-bezier(.22, .61, .36, 1);
-                width: 100%;
-            }
-
-            &::after {
-                background: transparent;
-                transition: 0s;
-                width: 100%;
-            }
-          }
+    @include media-query("sm") {
+      top: 10px;
     }
 
-    // Projects sub menu
-    .sub-menu {
-        opacity: 0;
-        padding: 20px 0 0 40px;
-        pointer-events: none;
-        transition: opacity $transition;
-        
-        > li:not(:last-of-type) {
-            margin-bottom: 20px;
-        }
-        
-        @include media-query('sm') {
-            background-color: $grey-lightest;
-            display: block;
-            left: -30px;
-            min-width: 175px;;
-            padding: 20px 10px;
-            position: absolute;
-            text-align: center;
-            top: 40px;
-            transform: translateY(10px);
-            transition: opacity $transition, transform $transition;
-
-            &::before {
-                border-color: transparent transparent #eeeeee transparent;
-                border-style: solid;
-                border-width: 0 15px 15px 15px;
-                content: '';
-                height: 0;
-                left: 50%;
-                position: absolute;
-                top: -15px;
-                transform: translateX(-50%);
-                width: 0;
-            }
-        }
+    &::before {
+      background: url("../../images/instagram.png") no-repeat 50% / 20px 20px;
+      content: "";
+      display: block;
+      height: 20px;
+      left: 9px;
+      position: absolute;
+      width: 20px;
     }
 
-    .menu-item-has-children {
-
-        // Mouse devices
-        @media (hover: hover) {
-
-            &:hover {
-
-                > .sub-menu {
-                    opacity: 1;
-                    pointer-events: all;
-                    transform: translateY(0);
-                }
-            }
-        }
+    > a {
+      display: block;
+      height: 20px;
+      font-size: 0;
+      width: 20px;
     }
+  }
+
+  a {
+    color: $grey;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      background: $grey;
+      content: "";
+      height: 1px;
+      margin-top: -0.5px;
+      position: absolute;
+      top: 50%;
+      width: 0%;
+    }
+
+    &::before {
+      left: -2.5px;
+    }
+
+    &::after {
+      background: $grey;
+      right: 2.5px;
+      transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:hover {
+      &::before {
+        background: $grey;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+        width: 100%;
+      }
+
+      &::after {
+        background: transparent;
+        transition: 0s;
+        width: 100%;
+      }
+    }
+  }
+
+  // Projects sub menu
+  .sub-menu {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 0 0 40px;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out 0.2s, max-height 0.2s ease-in-out 0.2s,
+      padding-top $transition;
+
+    > li:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    @include media-query("sm") {
+      background-color: $grey-lightest;
+      display: block;
+      left: -30px;
+      min-width: 175px;
+      padding: 20px 10px;
+      position: absolute;
+      text-align: center;
+      top: 40px;
+      transform: translateY(10px);
+      transition: opacity $transition, transform $transition;
+
+      &::before {
+        border-color: transparent transparent #eeeeee transparent;
+        border-style: solid;
+        border-width: 0 15px 15px 15px;
+        content: "";
+        height: 0;
+        left: 50%;
+        position: absolute;
+        top: -15px;
+        transform: translateX(-50%);
+        width: 0;
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    // Mouse devices
+    @media (hover: hover) {
+      &:hover {
+        > .sub-menu {
+          max-height: 100%;
+          opacity: 1;
+          padding-top: 20px;
+          pointer-events: all;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
 }
