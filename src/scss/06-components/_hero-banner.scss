@@ -1,0 +1,13 @@
+.hero-banner__img {
+  background: no-repeat 50% / cover;
+  height: 250px;
+  width: 100%;
+  
+  @include media-query('md') {
+    height: 350px;
+  }
+
+  @include media-query('xl') {
+    height: 500px;
+  }
+}
