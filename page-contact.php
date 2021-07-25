@@ -1,38 +1,37 @@
 <?php /* Template Name: Contact Template */ ?>
 
 <?php
-    $escAboutHeader  = esc_html(get_field('about_me_header'));
-    $aboutText  = get_field('about_me_text');
-    $email = esc_html(get_field('email_address'));
+$escContactHeader  = esc_html(get_field('contact_header'));
+$contactText = get_field('contact_text');
+$contactForm = get_field('contact_form_shortcode');
 ?>
 
 <?php get_header(); ?>
 
-<?php if (is_404()):?>
+<?php if (is_404()) : ?>
     <div class="error-block">
         <div class="error-block__inner">
             <?php the_field('404_message', 'options'); ?>
         </div>
     </div>
-<?php else: ?>
+<?php else : ?>
     <main>
-        <section class="about container">
-            <div class="about__wrap">
-                <div class="about__image">
-                    <?php the_post_thumbnail('', array('class' => 'about__image-src')); ?>
+        <section class="contact container">
+            <div class="contact__wrap">
+                <div class="contact__image">
+                    <?php the_post_thumbnail('', array('class' => 'contact__image-src')); ?>
                 </div>
-                <div class="about__text">
-                    <?php if ($aboutText) : ?>
-                        <div class="about__text-container">
-                            <?php if ($escAboutHeader) : ?>
-                                <h1 class="about__text-header"><?php echo $escAboutHeader; ?></h1>
-                            <?php endif; ?>
-                            <p><?php echo $aboutText; ?></p>
-                        </div>
-                    <?php endif; ?>
-                    <!-- TODO: Contact Form -->
-                    <div class="about__text-container">
-                        CONTACT FORM
+                <div class="contact__text">
+                    <div class="contact__text-container">
+                        <?php if ($escContactHeader) : ?>
+                            <h1 class="contact__text-header"><?php echo $escContactHeader; ?></h1>
+                        <?php endif; ?>
+                        <?php if ($contactText) : ?>
+                            <p><?php echo $contactText; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="contact__text-container">
+                        <?php echo $contactForm; ?>
                     </div>
                 </div>
             </div>
