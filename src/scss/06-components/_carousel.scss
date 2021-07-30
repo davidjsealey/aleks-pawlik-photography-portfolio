@@ -80,4 +80,12 @@
             max-width: none;
         }
     }
+
+    .owl-item {
+        transition: opacity $transition;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
 }
