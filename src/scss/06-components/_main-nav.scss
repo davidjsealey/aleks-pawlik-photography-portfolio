@@ -124,7 +124,7 @@
 
     @include media-query("sm") {
       background-color: $grey-lightest;
-      display: block;
+      display: inline-table;
       left: -30px;
       min-width: 175px;
       padding: 20px 10px;
