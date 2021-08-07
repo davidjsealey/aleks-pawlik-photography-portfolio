@@ -115,16 +115,14 @@
     opacity: 0;
     padding: 0 0 0 40px;
     pointer-events: none;
+    position: relative;
+    top: 20px;
     transform-origin: top;
     transform: scaleY(0);
     transition: max-height 0.2s ease-in-out 0.2s, opacity 0.2s ease-in-out 0.2s,
       transform 0.2s ease-in-out 0.2s;
 
     > li {
-      margin-top: 20px;
-    }
-
-    > li:not(:last-of-type) {
       margin-bottom: 20px;
     }
 
@@ -160,6 +158,11 @@
   }
 
   .menu-item-has-children {
+
+    > a {
+      margin-bottom: 20px;
+    }
+
     // Mouse devices
     @media (hover: hover) {
       &:hover {
