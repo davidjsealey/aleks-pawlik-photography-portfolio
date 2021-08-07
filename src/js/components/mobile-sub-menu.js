@@ -9,21 +9,16 @@ export class MobileSubMenu {
         const menuItemHasChildren = document.querySelector('.menu-item-has-children');
         const trigger = menuItemHasChildren.querySelector('a');
         const subMenu = menuItemHasChildren.querySelector('.sub-menu');
+        const activeClass = 'sub-menu--active'
         this.isActive = false;
 
         if (this.isTouchDevice()) {
             trigger.addEventListener('click', () => {
                 if(!this.isActive) {
-                    subMenu.style.opacity = "1";
-                    subMenu.style.pointerEvents = "all";
-                    subMenu.style.maxHeight = '100%'
-                    subMenu.style.paddingTop = '20px'
+                    subMenu.classList.add(activeClass)
                     this.isActive = true;
                 } else {
-                    subMenu.style.opacity = "0";
-                    subMenu.style.pointerEvents = "none";
-                    subMenu.style.maxHeight = '0'
-                    subMenu.style.paddingTop = '0'
+                    subMenu.classList.remove(activeClass)
                     this.isActive = false;
                 }
             })
