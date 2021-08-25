@@ -90,7 +90,7 @@
     .owl-item {
         
         &::after {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: #000;
             content: '';
             height: 100%;
             left: 0;
@@ -98,14 +98,14 @@
             pointer-events: none;
             position: absolute;
             top: 0;
-            transition: opacity $transition;
+            transition: opacity .05s linear;
             width: 100%;
         }
 
         &:hover {
             
             &::after {
-                opacity: 1;
+                opacity: 0.5;
             }
         }
     }
