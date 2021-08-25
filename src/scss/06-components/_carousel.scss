@@ -41,7 +41,8 @@
 
     .carousel-slider .carousel-slider__caption {
         color: #fff;
-        font-family: $font-family-body;
+        // font-family: $font-family-body;
+        font-family: 'Horizon', 'Roboto', Arial, sans-serif;
         left: 50%;
         position: absolute;
         text-align: center;
@@ -52,6 +53,7 @@
         
         .title {
             color: #fff;
+            font-family: 'Horizon', 'Roboto', Arial, sans-serif;
             font-size: 30px;
             text-transform: uppercase;
         }

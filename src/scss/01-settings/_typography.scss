@@ -1,3 +1,13 @@
+// Slide titles
+@font-face {
+  font-family: "Horizon";
+  src:  url('../../fonts/Horizon.woff2') format('woff2'),
+        url('../../fonts/Horizon.woff') format('woff'),
+        url("../../fonts/Horizon.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Font weights
 $light: 300;
 $normal: 500;
