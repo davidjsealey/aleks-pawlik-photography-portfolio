@@ -1,0 +1,111 @@
+.contact {
+  max-width: $grid-container-sm;
+}
+
+.contact__wrap {
+  @include grid-row();
+
+  @include media-query("sm") {
+    padding-top: 50px;
+  }
+
+  @include mobileLandscape {
+    padding-top: 0;
+  }
+}
+
+.contact__text-container:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.contact__image,
+.contact__text {
+  @include grid-column(
+    (
+      xxsmall: 12,
+      md: 6,
+    )
+  );
+
+  @include mobileLandscape {
+    width: 50%;
+  }
+}
+
+.contact__image {
+  margin-bottom: 30px;
+
+  @include mobileLandscape {
+    align-items: flex-end;
+  }
+}
+
+.contact__image-src {
+  height: auto;
+  max-width: 400px;
+  width: 100%;
+
+  @include mobileLandscape {
+    max-width: 300px;
+  }
+}
+
+.contact__text-header {
+  font-size: 2rem;
+  font-weight: $light;
+  margin-bottom: 30px;
+
+  @include mobileLandscape {
+    margin-bottom: 5px;
+  }
+}
+
+.contact__text {
+  @include mobileLandscape {
+    font-size: 15px;
+  }
+}
+
+// The form
+.wpcf7 {
+  font-family: $font-family-body;
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+
+    span {
+      display: block;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    input,
+    textarea {
+      border: solid 1px grey;
+      border-radius: 5px;
+      font-family: $font-family-body;
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  .wpcf7-submit {
+    background-color: $black;
+    border: solid 1px $white;
+    color: $white;
+    cursor: pointer;
+    font-family: $font-family-body;
+    padding: 10px 25px;
+    transition: background-color $transition, border $transition, color $transition;
+
+    &:hover {
+      background-color: $white;
+      border: solid 1px $black;
+      color: $black;
+    }
+  }
+}
