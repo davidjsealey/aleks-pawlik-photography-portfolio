@@ -6,7 +6,7 @@
   @include grid-row();
 
   @include media-query("sm") {
-    padding-top: 50px;
+    padding-top: 50px; 
   }
 
   @include mobileLandscape {

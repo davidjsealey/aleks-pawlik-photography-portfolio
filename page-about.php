@@ -1,4 +1,8 @@
-<?php /* Template Name: About Template */ ?>
+<?php 
+/*
+  * Template Name: About Page
+  */ 
+?>
 
 <?php
     $escAboutHeader  = esc_html(get_field('about_me_header'));

@@ -1,4 +1,8 @@
-<?php /* Template Name: Contact Template */ ?>
+<?php 
+/*
+  * Template Name: Contact Page
+  */ 
+?>
 
 <?php
 $escContactHeader  = esc_html(get_field('contact_header'));
